@@ -1,3 +1,5 @@
 com\xcloud\framework\common\base\ResultInfo.class
-com\xcloud\framework\common\config\Swagger2Config.class
+com\xcloud\framework\common\request\CreateUserRequest.class
 com\xcloud\framework\common\request\BasePage.class
+com\xcloud\framework\common\config\Swagger2Config.class
+com\xcloud\framework\common\constant\Constant.class

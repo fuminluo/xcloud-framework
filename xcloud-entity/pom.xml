@@ -12,6 +12,9 @@
     <groupId>com.xcloud.framework.entity</groupId>
     <artifactId>xcloud-entity</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <dependencies>
+
+    </dependencies>
 
 
 </project>

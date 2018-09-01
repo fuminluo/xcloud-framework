@@ -1,5 +1,6 @@
 package com.xcloud.framework.service;
 
+import com.xcloud.framework.common.request.CreateUserRequest;
 import com.xcloud.framework.entity.User;
 
 /**
@@ -11,5 +12,5 @@ import com.xcloud.framework.entity.User;
  **/
 public interface DemoService {
 
-    User save();
+ User save(CreateUserRequest createUser);
 }
