@@ -1,26 +1,37 @@
 package com.xcloud.framework.entity;
 
 
+import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
 
 /**
+ * 用户类
+ *
  * @Author administered
  * @Description
  * @Date 2018/9/1 19:29
  **/
+@Entity
+@Table(name="t_user")
 public class User implements Serializable {
 
+    @Id
+    @GeneratedValue(strategy= GenerationType.AUTO)
     private Long id;
 
-    private Long parentId;
+    @Column(nullable=false,columnDefinition="INT default 0")
+    private Long parentId = Long.valueOf(0);
 
+    @Column(length = 32,nullable = false,unique = true)
     private String username;
 
     private String password;
 
+    @Column(length = 32)
     private String nickname;
 
+    @Column(length = 11,unique = true)
     private String phone;
 
     private String photo;
@@ -28,6 +39,8 @@ public class User implements Serializable {
     private String email;
 
     private String sex;
+
+    private Integer age;
 
     private String address;
 
@@ -112,6 +125,14 @@ public class User implements Serializable {
 
     public void setSex(String sex) {
         this.sex = sex;
+    }
+
+    public Integer getAge() {
+        return age;
+    }
+
+    public void setAge(Integer age) {
+        this.age = age;
     }
 
     public String getAddress() {

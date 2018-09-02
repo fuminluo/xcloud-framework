@@ -19,6 +19,7 @@
         <module>xcloud-entity</module>
         <module>xcloud-service</module>
         <module>xcloud-mapper</module>
+        <module>xcloud-dao</module>
     </modules>
 
     <!-- 继承说明：这里继承SpringBoot提供的父工程 -->

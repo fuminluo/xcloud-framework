@@ -6,6 +6,9 @@ import com.xcloud.framework.mapper.UserMapper;
 import com.xcloud.framework.service.DemoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import java.beans.Transient;
 
 /**
  * DemoServiceImpl 类
@@ -22,6 +25,7 @@ public class DemoServiceImpl implements DemoService {
     UserMapper userMapper;
 
     @Override
+    @Transactional
     public User save(CreateUserRequest createUser) {
 
         userMapper.findAll();
