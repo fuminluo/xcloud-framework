@@ -4,7 +4,7 @@ import com.xcloud.framework.common.base.ResultInfo;
 import com.xcloud.framework.common.request.BasePage;
 import com.xcloud.framework.common.request.CreateUserRequest;
 import com.xcloud.framework.common.request.IdRequest;
-import com.xcloud.framework.dao.UserDao;
+import com.xcloud.framework.mapper.UserMapper;
 import com.xcloud.framework.service.DemoService;
 import com.xcloud.framework.service.UserService;
 import io.swagger.annotations.Api;
@@ -30,8 +30,10 @@ public class UserController {
     @Autowired
     UserService userService;
 
+
+
     @Autowired
-    UserDao userDao;
+    UserMapper userMapper;
 
     @ApiOperation(value = "创建用户", notes = "创建用户")
     @PostMapping("/v1/user")
@@ -43,7 +45,8 @@ public class UserController {
     @ApiOperation(value = "获取用户列表", notes = "获取用户列表")
     @GetMapping("/v1/users")
     public ResultInfo<?> getUsers(@Valid @ModelAttribute BasePage basePage) throws Exception {
-        return new ResultInfo<>(ResultInfo.SUCCESS, ResultInfo.MSG_SUCCESS, userDao.findAll());
+        userMapper.findAll();
+        return new ResultInfo<>(ResultInfo.SUCCESS, ResultInfo.MSG_SUCCESS,userMapper.selectList(null));
     }
 
     @ApiOperation(value = "获取单用户", notes = "获取单用户")

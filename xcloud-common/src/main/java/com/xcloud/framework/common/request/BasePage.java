@@ -18,7 +18,6 @@ public class BasePage implements Serializable {
     @Min(1)
     public Integer page = 1;
 
-    @Digits(integer=1, fraction=20)
     public Integer size = 20;
 
     public Integer getPage() {

@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.beans.Transient;
+import java.util.List;
 
 /**
  * DemoServiceImpl 类
@@ -35,5 +36,11 @@ public class DemoServiceImpl implements DemoService {
         user.setPassword(createUser.getPassword());
 
         return user;
+    }
+
+    @Override
+    @Transactional
+    public List<User> findList() {
+        return userMapper.findAll();
     }
 }

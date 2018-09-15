@@ -1,10 +1,8 @@
 package com.xcloud.framework.service.impl;
 
 import com.xcloud.framework.common.request.CreateRoleRequest;
-import com.xcloud.framework.dao.RoleDao;
 import com.xcloud.framework.entity.Role;
 import com.xcloud.framework.service.RoleService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -19,8 +17,7 @@ import org.springframework.transaction.annotation.Transactional;
 @Service
 public class RoleServiceImpl implements RoleService {
 
-    @Autowired
-    RoleDao roleDao;
+
 
     @Override
     @Transactional
@@ -29,6 +26,6 @@ public class RoleServiceImpl implements RoleService {
         role.setCode(createRole.getCode());
         role.setName(createRole.getName());
         role.setDepict(createRole.getDepict());
-        return roleDao.save(role);
+        return role;
     }
 }
