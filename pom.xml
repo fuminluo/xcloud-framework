@@ -19,6 +19,8 @@
         <module>xcloud-entity</module>
         <module>xcloud-service</module>
         <module>xcloud-mapper</module>
+        <module>xcloud-dubbo-productor</module>
+        <module>xcloud-dubbo-consumer</module>
     </modules>
 
     <!-- 继承说明：这里继承SpringBoot提供的父工程 -->
@@ -75,6 +77,15 @@
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-context</artifactId>
                 <version>5.0.8.RELEASE</version>
+            </dependency>
+            <dependency>
+                <groupId>io.dubbo.springboot</groupId>
+                <artifactId>spring-boot-starter-dubbo</artifactId>
+                <version>1.0.0</version>
+            </dependency>
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
             </dependency>
         </dependencies>
     </dependencyManagement>
