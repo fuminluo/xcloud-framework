@@ -21,6 +21,8 @@
         <module>xcloud-mapper</module>
         <module>xcloud-dubbo-productor</module>
         <module>xcloud-dubbo-consumer</module>
+        <module>xcloud-dubbo-api</module>
+        <module>xcloud-dubbo-api</module>
     </modules>
 
     <!-- 继承说明：这里继承SpringBoot提供的父工程 -->

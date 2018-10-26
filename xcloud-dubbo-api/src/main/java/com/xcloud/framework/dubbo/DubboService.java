@@ -1,4 +1,4 @@
-package com.xcloud.framework.dubbo.service;
+package com.xcloud.framework.dubbo;
 
 /**
  * @Author administered
