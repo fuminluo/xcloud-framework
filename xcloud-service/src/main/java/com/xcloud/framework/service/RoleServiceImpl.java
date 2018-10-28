@@ -1,4 +1,4 @@
-package com.xcloud.framework.service.impl;
+package com.xcloud.framework.service;
 
 import com.xcloud.framework.common.request.CreateRoleRequest;
 import com.xcloud.framework.entity.Role;

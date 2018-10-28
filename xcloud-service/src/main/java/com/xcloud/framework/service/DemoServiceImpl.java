@@ -1,33 +1,46 @@
-package com.xcloud.framework.service.impl;
+package com.xcloud.framework.service;
 
 import com.xcloud.framework.common.request.CreateUserRequest;
-import com.xcloud.framework.common.response.UserInfoResponse;
 import com.xcloud.framework.entity.User;
-import com.xcloud.framework.service.UserService;
+import com.xcloud.framework.mapper.UserMapper;
+import com.xcloud.framework.service.DemoService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.beans.Transient;
+import java.util.List;
 
 /**
+ * DemoServiceImpl 类
+ *
  * @Author administered
  * @Description
- * @Date 2018/9/2 17:14
+ * @Date 2018/9/1 14:57
  **/
 @Service
-public class UserServiceImpl implements UserService {
+public class DemoServiceImpl implements DemoService {
 
+
+    @Autowired
+    UserMapper userMapper;
 
     @Override
     @Transactional
     public User save(CreateUserRequest createUser) {
+
+        userMapper.findAll();
+
         User user = new User();
         user.setUsername(createUser.getUsername());
         user.setPassword(createUser.getPassword());
+
         return user;
     }
 
     @Override
-    public UserInfoResponse findUserInfoById(Long id) {
-        return null;
+    @Transactional
+    public List<User> findList() {
+        return userMapper.findAll();
     }
 }
