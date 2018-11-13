@@ -1,5 +1,7 @@
 package com.xcloud.framework.dubbo;
 
+import java.util.List;
+
 /**
  * @Author administered
  * @Description
@@ -8,4 +10,6 @@ package com.xcloud.framework.dubbo;
 public interface DubboService {
 
    String hello(String str);
+
+   List findAllList();
 }

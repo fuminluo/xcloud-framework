@@ -2,6 +2,10 @@ package com.xcloud.framework.dubbo.service;
 
 import com.alibaba.dubbo.config.annotation.Service;
 import com.xcloud.framework.dubbo.DubboService;
+import com.xcloud.framework.dubbo.mapper.UserMapper;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import java.util.List;
 
 /**
  * @Author administered
@@ -15,8 +19,18 @@ import com.xcloud.framework.dubbo.DubboService;
         registry = "${dubbo.registry.id}"
 )
 public class DubboServiceImpl implements DubboService {
+
+    @Autowired
+    UserMapper userMapper;
+
     @Override
     public String hello(String str) {
         return str;
+    }
+
+    @Override
+    public List findAllList() {
+        System.out.println(userMapper);
+        return userMapper.findAllList();
     }
 }

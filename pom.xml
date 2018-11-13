@@ -32,6 +32,7 @@
         <module>xcloud-dubbo-consumer</module>
         <module>xcloud-dubbo-api</module>
         <module>xcloud-postgresql</module>
+        <module>xcloud-security</module>
     </modules>
 
     <!-- 公共依赖-->

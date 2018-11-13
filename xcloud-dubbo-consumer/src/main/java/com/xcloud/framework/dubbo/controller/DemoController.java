@@ -24,4 +24,9 @@ public class DemoController {
     public String hello(@PathVariable(value = "str") String str) {
         return dubboService.hello(str);
     }
+
+    @GetMapping("/users")
+    public Object getUsers() {
+        return dubboService.findAllList();
+    }
 }
