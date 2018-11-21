@@ -9,7 +9,6 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 @SpringBootApplication
 @EnableEurekaClient
 @MapperScan({"com.xcloud.framework.mapper"})
-@EntityScan
 public class XcloudUserApplication {
 
     public static void main(String[] args) {

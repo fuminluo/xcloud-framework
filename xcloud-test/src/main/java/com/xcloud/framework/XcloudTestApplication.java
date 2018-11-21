@@ -7,7 +7,7 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 @SpringBootApplication
 @EnableEurekaClient
-@MapperScan("com.baomidou.mybatisplus.samples.quickstart.mapper")
+@MapperScan({"com.xcloud.framework.mapper"})
 public class XcloudTestApplication {
 
 	public static void main(String[] args) {

@@ -9,11 +9,12 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.xcloud.framework.entity</groupId>
+    <groupId>com.xcloud.framework</groupId>
     <artifactId>xcloud-entity</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <dependencies>
+    <packaging>jar</packaging>
 
+    <dependencies>
         <dependency>
             <groupId>org.hibernate.javax.persistence</groupId>
             <artifactId>hibernate-jpa-2.1-api</artifactId>

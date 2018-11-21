@@ -1,6 +1,6 @@
-package com.xcloud.framework.service;
+package com.xcloud.framework.pgsql.service;
 
-import com.xcloud.framework.entity.User;
+import com.xcloud.framework.pgsql.entity.User;
 
 import java.util.List;
 

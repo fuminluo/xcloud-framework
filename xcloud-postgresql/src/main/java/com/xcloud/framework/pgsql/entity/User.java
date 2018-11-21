@@ -1,4 +1,4 @@
-package com.xcloud.framework.entity;
+package com.xcloud.framework.pgsql.entity;
 
 import java.io.Serializable;
 import javax.persistence.*;

@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.xcloud.framework.mapper.UserMapper">
-  <resultMap id="BaseResultMap" type="com.xcloud.framework.entity.User">
+<mapper namespace="com.xcloud.framework.pgsql.mapper.PgsqlUserMapper">
+  <resultMap id="BaseResultMap" type="com.xcloud.framework.pgsql.entity.User">
     <result column="username" jdbcType="VARCHAR" property="username" />
     <result column="age" jdbcType="SMALLINT" property="age" />
     <result column="address" jdbcType="CHAR" property="address" />
     <result column="password" jdbcType="VARCHAR" property="password" />
     <result column="user_id" jdbcType="VARCHAR" property="userId" />
   </resultMap>
-  <insert id="insert" parameterType="com.xcloud.framework.entity.User">
+  <insert id="insert" parameterType="com.xcloud.framework.pgsql.entity.User">
     <selectKey keyProperty="userId" order="AFTER" resultType="java.lang.String">
       PostgreSQL
     </selectKey>
@@ -17,7 +17,7 @@
     values (#{userId,jdbcType=VARCHAR},#{username,jdbcType=VARCHAR}, #{age,jdbcType=SMALLINT}, #{address,jdbcType=CHAR},
       #{password,jdbcType=VARCHAR})
   </insert>
-  <insert id="insertSelective" parameterType="com.xcloud.framework.entity.User">
+  <insert id="insertSelective" parameterType="com.xcloud.framework.pgsql.entity.User">
     insert into t_user
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="userId != null">

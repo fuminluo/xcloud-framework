@@ -6,8 +6,8 @@
 
     <groupId>com.xcloud.framework</groupId>
     <artifactId>xcloud-framework</artifactId>
-    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
 
 
     <!-- 继承说明：这里继承SpringBoot提供的父工程 -->
@@ -17,6 +17,13 @@
         <version>2.0.6.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+        <spring-cloud.version>Finchley.SR1</spring-cloud.version>
+    </properties>
 
     <!-- 模块说明：这里声明多个子模块 -->
     <modules>
@@ -32,29 +39,55 @@
         <module>xcloud-dubbo-consumer</module>
         <module>xcloud-dubbo-api</module>
         <module>xcloud-postgresql</module>
-        <module>xcloud-security</module>
     </modules>
 
     <!-- 公共依赖-->
     <dependencies>
-        <dependency>
-            <groupId>commons-lang</groupId>
-            <artifactId>commons-lang</artifactId>
-            <version>2.6</version>
-        </dependency>
-        <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>fastjson</artifactId>
-            <version>1.2.46</version>
-        </dependency>
     </dependencies>
 
-    <!-- 版本说明：这里统一管理依赖的版本号 -->
+    <!-- 版本说明：这里统一管理依赖的版本号,子pom version 可以不写 -->
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>com.xcloud.framework.common</groupId>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+                <version>LATEST</version>
+            </dependency>
+            <dependency>
+                <groupId>com.xcloud.framework</groupId>
                 <artifactId>xcloud-common</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>com.xcloud.framework</groupId>
+                <artifactId>xcloud-entity</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>com.xcloud.framework</groupId>
+                <artifactId>xcloud-mapper</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>com.xcloud.framework</groupId>
+                <artifactId>xcloud-service</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>com.xcloud.framework.eureka</groupId>
+                <artifactId>xcloud-eureka</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>com.xcloud.framework.routing</groupId>
+                <artifactId>xcloud-routing</artifactId>
                 <version>1.0-SNAPSHOT</version>
             </dependency>
             <dependency>
@@ -68,30 +101,41 @@
                 <version>1.0-SNAPSHOT</version>
             </dependency>
             <dependency>
-                <groupId>com.xcloud.framework.entity</groupId>
-                <artifactId>xcloud-entity</artifactId>
-                <version>1.0-SNAPSHOT</version>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>3.6</version>
             </dependency>
             <dependency>
-                <groupId>com.xcloud.framework.eureka</groupId>
-                <artifactId>xcloud-eureka</artifactId>
-                <version>1.0-SNAPSHOT</version>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>5.1.46</version>
             </dependency>
             <dependency>
-                <groupId>com.xcloud.framework.mapper</groupId>
-                <artifactId>xcloud-mapper</artifactId>
-                <version>1.0-SNAPSHOT</version>
+                <groupId>org.hibernate</groupId>
+                <artifactId>hibernate-validator</artifactId>
+                <version>5.4.1.Final</version>
             </dependency>
             <dependency>
-                <groupId>com.xcloud.framework.routing</groupId>
-                <artifactId>xcloud-routing</artifactId>
-                <version>1.0-SNAPSHOT</version>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>1.3.1</version>
             </dependency>
             <dependency>
-                <groupId>com.xcloud.framework.service</groupId>
-                <artifactId>xcloud-service</artifactId>
-                <version>1.0-SNAPSHOT</version>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>3.0.1</version>
+            </dependency>
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger2</artifactId>
+                <version>2.4.0</version>
+            </dependency>
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger-ui</artifactId>
+                <version>2.4.0</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
+
 </project>

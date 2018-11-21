@@ -1,8 +1,8 @@
-package com.xcloud.framework.controller;
+package com.xcloud.framework.pgsql.controller;
 
 import com.xcloud.framework.common.base.ResultInfo;
-import com.xcloud.framework.entity.User;
-import com.xcloud.framework.service.DemoService;
+import com.xcloud.framework.pgsql.entity.User;
+import com.xcloud.framework.pgsql.service.DemoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
