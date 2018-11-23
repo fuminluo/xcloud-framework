@@ -1,6 +1,5 @@
 package com.xcloud.framework.entity;
 
-import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
 import java.util.Set;
@@ -12,23 +11,16 @@ import java.util.Set;
  * @Description
  * @Date 2018/9/2 16:17
  **/
-@Entity
-@Table(name = "t_role")
 public class Role implements Serializable {
 
     private static final long serialVersionUID = 1630390217585804520L;
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @OneToMany
     private Set<User> user;
 
-    @Column(length = 32,nullable = false)
     private String name;
 
-    @Column(length = 32,nullable = false,unique = true)
     private String code;
 
     private String depict;

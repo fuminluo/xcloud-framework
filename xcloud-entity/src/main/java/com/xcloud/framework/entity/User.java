@@ -1,7 +1,8 @@
 package com.xcloud.framework.entity;
 
 
-import javax.persistence.*;
+import com.baomidou.mybatisplus.annotation.TableName;
+
 import java.io.Serializable;
 import java.util.Date;
 
@@ -12,26 +13,19 @@ import java.util.Date;
  * @Description
  * @Date 2018/9/1 19:29
  **/
-@Entity
-@Table(name="t_user")
+@TableName("t_user")
 public class User implements Serializable {
 
-    @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
     private Long id;
 
-    @Column(nullable=false,columnDefinition="INT default 0")
     private Long parentId = Long.valueOf(0);
 
-    @Column(length = 32,nullable = false,unique = true)
     private String username;
 
     private String password;
 
-    @Column(length = 32)
     private String nickname;
 
-    @Column(length = 11,unique = true)
     private String phone;
 
     private String photo;

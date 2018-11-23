@@ -4,6 +4,8 @@ import com.xcloud.framework.common.request.CreateUserRequest;
 import com.xcloud.framework.common.response.UserInfoResponse;
 import com.xcloud.framework.entity.User;
 
+import java.util.List;
+
 /**
  * @Author administered
  * @Description
@@ -14,5 +16,7 @@ public interface UserService {
     User save(CreateUserRequest createUser);
 
 
-    UserInfoResponse findUserInfoById(Long id);
+    User findUserInfoById(Long id);
+
+    List<User> findList();
 }

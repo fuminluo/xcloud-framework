@@ -43,8 +43,7 @@ public class UserController {
     @ApiOperation(value = "获取用户列表", notes = "获取用户列表")
     @GetMapping("/v1/users")
     public ResultInfo<?> getUsers(@Valid @ModelAttribute BasePage basePage) throws Exception {
-        userMapper.findAll();
-        return new ResultInfo<>(ResultInfo.SUCCESS, ResultInfo.MSG_SUCCESS,userMapper.selectList(null));
+        return new ResultInfo<>(ResultInfo.SUCCESS, ResultInfo.MSG_SUCCESS,userService.findList());
     }
 
     @ApiOperation(value = "获取单用户", notes = "获取单用户")
@@ -55,7 +54,7 @@ public class UserController {
 
     @ApiOperation(value = "修改用户", notes = "修改用户")
     @PutMapping("/v1/user")
-    public ResultInfo<?> updateUser(@Valid @ModelAttribute IdRequest request) throws Exception {
-        return new ResultInfo<>(ResultInfo.SUCCESS, ResultInfo.MSG_SUCCESS, request.getId());
+    public ResultInfo<?> updateUser(@Valid @RequestBody IdRequest request) throws Exception {
+        return new ResultInfo<>(ResultInfo.SUCCESS, ResultInfo.MSG_SUCCESS);
     }
 }
