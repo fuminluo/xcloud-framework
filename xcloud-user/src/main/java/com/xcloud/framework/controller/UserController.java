@@ -43,7 +43,7 @@ public class UserController {
     @ApiOperation(value = "获取用户列表", notes = "获取用户列表")
     @GetMapping("/v1/users")
     public ResultInfo<?> getUsers(@Valid @ModelAttribute BasePage basePage) throws Exception {
-        return new ResultInfo<>(ResultInfo.SUCCESS, ResultInfo.MSG_SUCCESS,userService.findList());
+        return new ResultInfo<>(ResultInfo.SUCCESS, ResultInfo.MSG_SUCCESS, userService.findList());
     }
 
     @ApiOperation(value = "获取单用户", notes = "获取单用户")

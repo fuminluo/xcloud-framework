@@ -1,12 +1,16 @@
 package com.xcloud.framework.common.base;
 
 
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+
 /**
  * 返回模板
  *
  * @author LuoFuMin
  * @data 2018/8/31
  */
+
+@JsonSerialize(include = JsonSerialize.Inclusion.NON_NULL)
 public class ResultInfo<T> {
 
     public static final Integer SUCCESS = 200;
@@ -27,7 +31,12 @@ public class ResultInfo<T> {
     private T data;
 
 
-    public ResultInfo() {
+    public static ResultInfo<?> OK(Object obj) {
+        return new ResultInfo<>(ResultInfo.SUCCESS, ResultInfo.MSG_SUCCESS, obj);
+    }
+
+    public static ResultInfo<?> FALL() {
+        return new ResultInfo<>(ResultInfo.FAIL, ResultInfo.MSG_FAIL);
     }
 
     public ResultInfo(Integer code, String message) {
