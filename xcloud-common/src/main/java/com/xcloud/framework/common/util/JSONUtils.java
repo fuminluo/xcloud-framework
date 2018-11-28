@@ -34,6 +34,7 @@ public class JSONUtils {
         return null;
     }
 
+
     /**
      * 将json转化为对象 * @author yangwenkui * @time 2017年3月16日 下午2:56:26 * @param json json对象 * @param clazz 待转化的对象类型 * @return 当转化发生异常时返回null
      */
