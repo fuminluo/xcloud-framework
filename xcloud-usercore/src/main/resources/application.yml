@@ -1,0 +1,41 @@
+server:
+  port: 8763
+spring:
+  application:
+    name: xcloud-usercore
+  datasource:
+    username: root
+    password: 123456
+    url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf8
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8760/eureka/
+
+
+security:
+  oauth2:
+    resource:
+      user-info-uri: http://localhost:8710/oauth/current
+    client:
+      id: client_2
+      client-secret: 123456
+      access-token-uri: http://localhost:8710/oauth/token
+      grant-type: client_credentials,password
+      scope: server
+
+mybatis-plus:
+  mapper-locations: classpath:/mapper/*Mapper.xml
+  global-config:
+    db-config:
+      table-prefix: t_
+logging:
+  level:com.xcloud.framework.mapper : debug
+
+
+
+
+
+

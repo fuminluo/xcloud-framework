@@ -15,7 +15,7 @@ import java.security.Principal;
  **/
 
 @RestController
-@RequestMapping("/users")
+@RequestMapping("/oauth")
 public class OAuth2Controller {
 
     private static final Logger logger = LoggerFactory.getLogger(OAuth2Controller.class);

@@ -2,10 +2,7 @@ package com.xcloud.framework.controller;
 
 import com.xcloud.framework.common.base.ResultInfo;
 import com.xcloud.framework.common.request.BasePage;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 
@@ -19,7 +16,7 @@ import javax.validation.Valid;
 public class TestController {
 
 
-    @GetMapping("/v1/tests")
+    @GetMapping("/v1/test")
     public ResultInfo<?> getUsers(@Valid @ModelAttribute BasePage basePage) throws Exception {
         return new ResultInfo<>(ResultInfo.SUCCESS, "Tset");
     }

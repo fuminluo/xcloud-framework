@@ -29,7 +29,7 @@ import java.util.Map;
 public class ControllerLogAspect {
     private static final Logger LOGGER = LoggerFactory.getLogger(ControllerLogAspect.class);
 
-    @Pointcut("execution(public * com.*.*.controller.*.*(..))")
+    @Pointcut("execution(public * *..controller.*.*(..))")
     public void executeService() {
     }
 
