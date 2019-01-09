@@ -1,6 +1,6 @@
-package com.xcloud.framweork.oauth2.config;
+package com.xcloud.framework.oauth2.config;
 
-import com.xcloud.framweork.oauth2.custom.CustomRedisTokenStore;
+import com.xcloud.framework.oauth2.custom.CustomRedisTokenStore;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.connection.RedisConnectionFactory;

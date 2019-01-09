@@ -1,4 +1,4 @@
-package com.xcloud.framweork.oauth2.controller;
+package com.xcloud.framework.oauth2.controller;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

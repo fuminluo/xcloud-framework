@@ -1,4 +1,4 @@
-package com.xcloud.framweork.oauth2.config;
+package com.xcloud.framework.oauth2.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

@@ -1,4 +1,4 @@
-package com.xcloud.framweork.oauth2;
+package com.xcloud.framework.oauth2;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -102,7 +102,7 @@ public class ControllerLogAspect {
             loggerInfo.setDuration(endTime - beginTime);
             loggerInfo.setTaskuuid(taskuuid);
             loggerInfo.setResult(keys);
-            LOGGER.info("[OUT] - " + JsonFormatUtils.formatJson(JSON.toJSONString(loggerInfo)));
+           // LOGGER.info("[OUT] - " + JsonFormatUtils.formatJson(JSON.toJSONString(loggerInfo)));
         } catch (Exception e) {
 
         }

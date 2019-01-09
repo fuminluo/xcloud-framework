@@ -1,4 +1,4 @@
-package com.xcloud.framweork.oauth2.custom;
+package com.xcloud.framework.oauth2.custom;
 
 import org.springframework.data.redis.connection.RedisConnection;
 import org.springframework.data.redis.connection.RedisConnectionFactory;

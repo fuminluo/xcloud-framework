@@ -23,7 +23,6 @@ public class XcloudGatewayApplication {
         StripPrefixGatewayFilterFactory.Config config = new StripPrefixGatewayFilterFactory.Config();
         config.setParts(1);
         return builder.routes()
-                .route("demo", r -> r.path("/api/**").filters(f -> f.stripPrefix(1)).uri("http://localhost:8080"))
                 .route("xcloud-oauth", r -> r.path("/xcloud-oauth/**").filters(f -> f.stripPrefix(1)).uri("http://localhost:8710"))
                 .route("xcloud-usercore", r -> r.path("/xcloud-usercore/**").filters(f -> f.stripPrefix(1)).uri("http://localhost:8763"))
                 .route("xcloud-test", r -> r.path("/xcloud-test/**").filters(f -> f.stripPrefix(1)).uri("http://localhost:8762"))
