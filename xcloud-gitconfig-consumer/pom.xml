@@ -7,7 +7,7 @@
 		<artifactId>xcloud-framework</artifactId>
 		<version>1.0-SNAPSHOT</version>
 	</parent>
-	<groupId>com.xcloud.framework.config.consumer</groupId>
+	<groupId>com.xcloud.framework</groupId>
 	<artifactId>xcloud-gitconfig-consumer</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>xcloud-gitconfig-consumer</name>

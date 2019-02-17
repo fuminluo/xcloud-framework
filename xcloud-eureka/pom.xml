@@ -8,7 +8,7 @@
 		<version>1.0-SNAPSHOT</version>
 	</parent>
 
-	<groupId>com.xcloud.framework.eureka</groupId>
+	<groupId>com.xcloud.framework</groupId>
 	<artifactId>xcloud-eureka</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
