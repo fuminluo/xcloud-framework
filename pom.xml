@@ -40,6 +40,8 @@
         <module>xcloud-postgresql</module>
         <module>xcloud-gitconfig-consumer</module>
         <module>xcloud-gitconfig-service</module>
+        <module>xcloud-gateway</module>
+        <module>xcloud-oauth2</module>
     </modules>
 
     <!-- 公共依赖-->
