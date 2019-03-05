@@ -20,17 +20,17 @@ SET FOREIGN_KEY_CHECKS=0;
 -- ----------------------------
 DROP TABLE IF EXISTS `t_role`;
 CREATE TABLE `t_role` (
-  `id` bigint(20) NOT NULL,
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `code` varchar(32) COLLATE utf8_bin NOT NULL,
-  `create_time` datetime DEFAULT NULL,
-  `deleted` bit(1) DEFAULT NULL,
-  `depict` varchar(255) COLLATE utf8_bin DEFAULT NULL,
   `name` varchar(32) COLLATE utf8_bin NOT NULL,
-  `status` tinyint(4) DEFAULT NULL,
+  `depict` varchar(255) COLLATE utf8_bin DEFAULT NULL,
+  `create_time` datetime DEFAULT NULL,
   `update_time` datetime DEFAULT NULL,
+  `status` tinyint(4) NOT NULL DEFAULT '1',
+  `deleted` bit(1) NOT NULL DEFAULT b'0',
   PRIMARY KEY (`id`),
   UNIQUE KEY `UK_1kdn49aubc7bcawhth747xgfs` (`code`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- ----------------------------
 -- Table structure for t_role_user
@@ -39,18 +39,18 @@ DROP TABLE IF EXISTS `t_role_user`;
 CREATE TABLE `t_role_user` (
   `role_id` bigint(20) NOT NULL,
   `user_id` bigint(20) NOT NULL,
-  PRIMARY KEY (`role_id`,`user_id`),
-  UNIQUE KEY `UK_5jg9sj3cv5ews49641tu2hitf` (`user_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+  PRIMARY KEY (`role_id`,`user_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
 
 -- ----------------------------
 -- Table structure for t_user
 -- ----------------------------
 DROP TABLE IF EXISTS `t_user`;
 CREATE TABLE `t_user` (
-  `id` bigint(20) NOT NULL,
+  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '用户id',
   `username` varchar(32) COLLATE utf8_bin NOT NULL,
-  `password` varchar(255) COLLATE utf8_bin DEFAULT NULL,
+  `password` varchar(255) COLLATE utf8_bin NOT NULL,
   `nickname` varchar(32) COLLATE utf8_bin DEFAULT NULL,
   `photo` varchar(255) COLLATE utf8_bin DEFAULT NULL,
   `phone` varchar(11) COLLATE utf8_bin DEFAULT NULL,
@@ -63,8 +63,10 @@ CREATE TABLE `t_user` (
   `create_time` datetime DEFAULT NULL,
   `update_time` datetime DEFAULT NULL,
   `status` tinyint(4) DEFAULT NULL,
-  `deleted` bit(1) DEFAULT NULL,
+  `deleted` bit(1) NOT NULL DEFAULT b'0',
   PRIMARY KEY (`id`),
-  UNIQUE KEY `UK_jhib4legehrm4yscx9t3lirqi` (`username`),
-  UNIQUE KEY `UK_m5bu5erj83eubjsa1nyms0t89` (`phone`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+  UNIQUE KEY `UK_jhib4legehrm4yscx9t3lirqi` (`username`) USING HASH,
+  UNIQUE KEY `UK_m5bu5erj83eubjsa1nyms0t89` (`phone`) USING HASH,
+  KEY `IK_nickname_age_sex` (`nickname`,`age`,`sex`) USING BTREE
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
