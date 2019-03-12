@@ -14,7 +14,7 @@
 
 > 4. xcloud-test 测试微服务(springboot+mybatis+mybatisplus)
 
-> 5. xcloud-user 用户中心微服务(springboot+mybatis+mybatisplus)
+> 5. xcloud-usercore 用户中心微服务(springboot+mybatis+mybatisplus)
 
 > 6. xcloud-service 业务逻辑模块（不可单独启动）
 
@@ -32,7 +32,6 @@
 
 > 13. xcloud-postgresql psSQL + Mybatis 集成案例（独立模块）
 
-> 14. demo （最简单的springboot项目）
 
 >## 环境
 
