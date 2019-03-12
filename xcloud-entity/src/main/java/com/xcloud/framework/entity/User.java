@@ -18,7 +18,7 @@ public class User implements Serializable {
 
     private Long id;
 
-    private Long parentId = Long.valueOf(0);
+    private Long parentId;
 
     private String username;
 
@@ -47,6 +47,14 @@ public class User implements Serializable {
     private Byte status;
 
     private Boolean deleted;
+
+
+    public User() {
+    }
+
+    public User(Long id) {
+        this.id = id;
+    }
 
 
     public Long getId() {

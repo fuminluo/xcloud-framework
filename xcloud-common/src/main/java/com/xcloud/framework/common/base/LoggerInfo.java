@@ -5,7 +5,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import java.io.Serializable;
 
 /**
- * @author LuoFuMin
+ * @author administered
  * @data 2018/8/7
  */
 

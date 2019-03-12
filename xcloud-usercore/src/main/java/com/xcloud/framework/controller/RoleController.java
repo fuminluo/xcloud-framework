@@ -27,7 +27,6 @@ public class RoleController {
     RoleService roleService;
 
 
-
     @ApiOperation(value = "创建角色", notes = "创建角色")
     @PostMapping("/v1/role")
     public ResultInfo<?> createUser(@Valid @RequestBody CreateRoleRequest createRole) throws Exception {
@@ -35,7 +34,7 @@ public class RoleController {
     }
 
 
-    @ApiOperation(value = "获取用户列表", notes = "获取用户列表")
+    @ApiOperation(value = "获取角色列表", notes = "获取角色列表")
     @GetMapping("/v1/roles")
     public ResultInfo<?> getUsers(@Valid @ModelAttribute BasePage basePage) throws Exception {
         return new ResultInfo<>(ResultInfo.SUCCESS, ResultInfo.MSG_SUCCESS);

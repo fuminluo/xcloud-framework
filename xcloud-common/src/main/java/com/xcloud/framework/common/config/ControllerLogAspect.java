@@ -16,7 +16,7 @@ import org.springframework.web.context.request.RequestContextHolder;
 import javax.servlet.http.HttpServletRequest;
 
 /**
- * @author LuoFuMin
+ * @author administered
  * @data 2018/8/7
  */
 @Aspect
@@ -81,7 +81,7 @@ public class ControllerLogAspect {
             throwing = "exception"
     )
     public void doAfterThrowingAdvice(JoinPoint joinPoint, Throwable exception) {
-        LOGGER.info("[IN] EXCEPTION- " + exception.getStackTrace());
+        LOGGER.info("[IN] exception- " + exception.getStackTrace());
     }
 
 

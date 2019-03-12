@@ -1,7 +1,7 @@
 package com.xcloud.framework.common.util;
 
 /**
- * @author LuoFuMin
+ * @author administered
  * @data 2018/8/7
  */
 public class JsonFormatUtils {
