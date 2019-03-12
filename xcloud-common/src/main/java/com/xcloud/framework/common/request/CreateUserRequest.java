@@ -17,7 +17,7 @@ public class CreateUserRequest implements Serializable {
 
 
     @NotBlank(message = "用户名不能为空")
-    @Pattern(message = "用户名必须是6~20位数字字母的组合", regexp = "[A-Za-z0-9]{6,20}")
+    @Pattern(message = "用户名必须是3~20位数字字母的组合", regexp = "[A-Za-z0-9]{3,20}")
     private String username;
 
 

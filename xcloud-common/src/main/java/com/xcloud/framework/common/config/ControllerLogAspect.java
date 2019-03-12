@@ -39,7 +39,7 @@ public class ControllerLogAspect {
             loggerInfo.setTimestamp(beginTime);
             loggerInfo.setMethod(request.getMethod());
             Object[] args = joinPoint.getArgs();
-            LOGGER.info("》》 args ："+ ObjectSizeCalculator.getObjectSize(args));
+            //LOGGER.info("》》 args ："+ ObjectSizeCalculator.getObjectSize(args));
             //数据内容大于1000字节不转换
             if (ObjectSizeCalculator.getObjectSize(args) > 1000) {
                 loggerInfo.setParameters("参数过大不解析！");

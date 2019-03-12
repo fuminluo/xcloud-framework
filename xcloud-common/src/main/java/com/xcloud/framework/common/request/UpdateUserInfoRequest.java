@@ -1,5 +1,8 @@
 package com.xcloud.framework.common.request;
 
+import org.hibernate.validator.constraints.Email;
+
+import javax.validation.constraints.Max;
 import java.io.Serializable;
 import java.util.Date;
 
@@ -17,10 +20,12 @@ public class UpdateUserInfoRequest extends IdRequest implements Serializable {
 
     private String photo;
 
+    @Email
     private String email;
 
     private String sex;
 
+    @Max(200)
     private Integer age;
 
     private String address;

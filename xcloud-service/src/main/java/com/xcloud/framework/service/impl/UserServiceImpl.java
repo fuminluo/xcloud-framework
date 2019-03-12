@@ -103,25 +103,25 @@ public class UserServiceImpl implements UserService {
     public Boolean updateOne(UpdateUserInfoRequest request) {
 
         User user = new User(request.getId());
-        if (StringUtils.isEmpty(request.getSex())) {
+        if (!StringUtils.isEmpty(request.getSex())) {
             user.setSex(request.getSex());
         }
-        if (StringUtils.isEmpty(request.getAddress())) {
+        if (!StringUtils.isEmpty(request.getAddress())) {
             user.setAddress(request.getAddress());
         }
-        if (StringUtils.isEmpty(request.getNickname())) {
+        if (!StringUtils.isEmpty(request.getNickname())) {
             user.setNickname(request.getNickname());
         }
-        if (StringUtils.isEmpty(request.getEmail())) {
+        if (!StringUtils.isEmpty(request.getEmail())) {
             user.setEmail(request.getEmail());
         }
-        if (StringUtils.isEmpty(request.getPhone())) {
+        if (!StringUtils.isEmpty(request.getPhone())) {
             user.setPhone(request.getPhone());
         }
         if (request.getBirthday() != null) {
             user.setBirthday(request.getBirthday());
         }
-        if (StringUtils.isEmpty(request.getPhoto())) {
+        if (!StringUtils.isEmpty(request.getPhoto())) {
             user.setPhoto(request.getPhoto());
         }
         return userMapper.updateById(user) > 0;

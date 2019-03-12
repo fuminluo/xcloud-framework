@@ -495,6 +495,7 @@ http://localhost:8761/xcloud-oauth/oauth/token?username=user_1&password=123456&g
 正确的访问姿势：
 可以是以url参数形式 http://localhost:8761/xcloud-test/order/1?access_token=e9a93dff-fd58-4af3-b458-01fbb6079416
 也可以是headers 的authorization中 bearer token 形式
+![g2.png](/image/authorization_bearer_token.png)
 
 不需要验证的资源product  http://localhost:8765/xcloud-test/product/1
 ```
