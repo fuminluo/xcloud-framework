@@ -28,6 +28,7 @@
     <!-- 模块说明：这里声明多个子模块 -->
     <modules>
         <module>xcloud-test</module>
+        <module>xcloud-consul</module>
         <module>xcloud-usercore</module>
         <module>xcloud-eureka</module>
         <module>xcloud-common</module>
