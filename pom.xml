@@ -43,6 +43,7 @@
         <module>xcloud-gitconfig-service</module>
         <module>xcloud-gateway</module>
         <module>xcloud-oauth2</module>
+        <module>xcloud-demo-starter</module>
     </modules>
 
     <!-- 公共依赖-->

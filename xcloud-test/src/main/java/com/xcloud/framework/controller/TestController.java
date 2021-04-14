@@ -2,9 +2,12 @@ package com.xcloud.framework.controller;
 
 import com.xcloud.framework.common.base.ResultInfo;
 import com.xcloud.framework.common.request.BasePage;
+import com.xcloud.framework.demo.starter.XxTemplate;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.util.UUID;
 
 /**
  * 案例口层
@@ -15,10 +18,13 @@ import javax.validation.Valid;
 @RestController
 public class TestController {
 
+    @Autowired
+    XxTemplate xxTemplate;
+
 
     @GetMapping("/v1/test")
     public ResultInfo<?> getUsers(@Valid @ModelAttribute BasePage basePage) throws Exception {
-        return new ResultInfo<>(ResultInfo.SUCCESS, "Tset");
+        return new ResultInfo<>(ResultInfo.SUCCESS, xxTemplate.get(UUID.randomUUID().toString()));
     }
 
     @GetMapping("/v1/test/{id}")

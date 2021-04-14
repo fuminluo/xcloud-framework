@@ -37,3 +37,5 @@ security:
       access-token-uri: http://localhost:8710/oauth/token
       grant-type: client_credentials,password
       scope: server
+xx:
+  name: "abc"
