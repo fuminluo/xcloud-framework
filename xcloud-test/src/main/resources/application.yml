@@ -39,3 +39,5 @@ security:
       scope: server
 xx:
   name: "abc"
+my:
+  prefix: "xxx"

@@ -18,6 +18,7 @@ mvn/wrapper/maven-wrapper.jar
 *.ipr
 *.class
 *.jar
+*.class
 
 ### NetBeans ###
 /nbproject/private/
@@ -26,3 +27,4 @@ mvn/wrapper/maven-wrapper.jar
 /dist/
 /nbdist/
 /.nb-gradle/
+/target/
